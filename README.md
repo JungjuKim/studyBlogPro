@@ -6,10 +6,20 @@
 2. 기간 : 2023-12-05 ~ ing
 
 ### 개발환경
-* 운영체제 : Window
-* 개발도구 : STS
-* 개발언어 : Java(JDK 11), HTML5, CSS, JavaScript
-* 부가기능 : Spring, JQuery, Ajax, JSTL, BootStrap
-* 프로젝트 : GitHub, Apache Tomcat
-* DB : Oracle(developer)
-
+* Skills
+  * Java(JDK 11)
+  * Spring
+  * HTML5 & CSS3
+  * JavaScript
+  * jQuery
+  * JSTL
+  * Ajax
+  * BootStrap
+  * Tomcat server 8.5v
+  * Oracle 11g
+  * ojdbc6
+* Tools
+  * Oracle Developer
+  * STS
+  * Github
+  * Draw.io, exERD?
