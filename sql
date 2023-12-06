@@ -1,4 +1,4 @@
-계정 생성문
+-- 계정 생성문
 
 -- 계정 생성
 CREATE USER studyBlog IDENTIFIED BY madle;
@@ -13,3 +13,24 @@ GRANT CREATE SESSION, CREATE TABLE, CREATE VIEW, CREATE PROCEDURE, CREATE SEQUEN
 
 -- 테이블, 데이터 import, export
 -- https://wakestand.tistory.com/372
+
+
+-- 테이블, 시퀀스 생성문
+CREATE TABLE users
+(
+    username VARCHAR2(50) NOT NULL PRIMARY KEY
+    , password VARCHAR2(100) NOT NULL
+    , name NVARCHAR2(20) NOT NULL
+    , nickname NVARCHAR2(20) NOT NULL
+);
+
+CREATE TABLE board
+(
+    bno NUMBER(30) NOT NULL PRIMARY KEY
+    , title NVARCHAR2(100) NOT NULL
+    , contents CLOB NOT NULL
+    , username VARCHAR2(50) NOT NULL
+    , CONSTRAINT fk_username FOREIGN KEY(username) REFERENCES users(username)
+);
+
+CREATE SEQUENCE seq_board;
