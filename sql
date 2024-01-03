@@ -30,6 +30,10 @@ CREATE TABLE board
     , title NVARCHAR2(100) NOT NULL
     , contents CLOB NOT NULL
     , username VARCHAR2(50) NOT NULL
+    , major_category VARCHAR2(255) NOT NULL
+    , medium_category VARCHAR2(255) NOT NULL
+    , minor_category VARCHAR2(255) NOT NULL
+    , detail_category VARCHAR2(255) NOT NULL
     , CONSTRAINT fk_username FOREIGN KEY(username) REFERENCES users(username)
 );
 
