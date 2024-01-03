@@ -30,16 +30,18 @@ CREATE TABLE board
     , title NVARCHAR2(100) NOT NULL
     , contents CLOB NOT NULL
     , username VARCHAR2(50) NOT NULL
-    , CONSTRAINT fk_username FOREIGN KEY(username) REFERENCES users(username)
+    , CONSTRAINT fk_board_username FOREIGN KEY(username) REFERENCES users(username)
     , CONSTRAINT fk_category_no FOREIGN KEY(category_no) REFERENCES category(category_no)
 );
 
 CREATE TABLE CATEGORY (
-    category_no NUMBER(7) PRIMARY KEY,
-    major_category VARCHAR2(255) NOT NULL,
-    medium_category VARCHAR2(255),
-    minor_category VARCHAR2(255),
-    detail_category VARCHAR2(255)
+    category_no NUMBER(7) PRIMARY KEY
+    , username VARCHAR2(50) NOT NULL
+    , major_category VARCHAR2(255) NOT NULL
+    , medium_category VARCHAR2(255)
+    , minor_category VARCHAR2(255)
+    , detail_category VARCHAR2(255)
+    , CONSTRAINT fk_category_username FOREIGN KEY(username) REFERENCES users(username)
 );
 
 CREATE SEQUENCE seq_board;
